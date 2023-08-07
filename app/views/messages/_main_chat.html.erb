@@ -4,6 +4,7 @@
     hogefuga
     </div>
   </div>
+
   <div class="right-header">
     <div class="header-button">
       <a href="#">チャットを終了する</a>
@@ -12,9 +13,7 @@
 </div>
 
 <div class="messages">
-</div>
-
-<div class="form">
+  <%= render partial: 'message', collection: @messages %>  
 </div>
 
 <%= form_with model: [@room, @message], class: 'form', local: true do |f| %>
